@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@400;700display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     font-family: 'Lato', sans-serif;
     padding: 0;
@@ -33,14 +33,26 @@ li {
     flex: 1;
 }
 
+.container {
+    padding: 50px 0;
+}
+
 .row {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.text--purple {
-   color: #6030b1; 
+.text--blue {
+   color: #1322E0; 
+}
+
+section:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+
+.section__title {
+    margin-bottom: 20px;
 }
 
 /*Navigation Bar*/
@@ -67,7 +79,7 @@ nav {
 }
 
 .nav__link--anchor-primary {
-    background-color: #6030b1;
+    background-color: #1322E0;
     padding: 8px 20px;
     border-radius: 50px;
     color: white;
@@ -75,12 +87,12 @@ nav {
 }
 
 .nav__link--anchor-primary:hover {
-    background-color: #5d3eff;
+    background-color: #0ab1f3;
 }
 
 .personal__logo {
     font-size: 24px;
-    color: #5030b1;
+    color: #1322E0;
     margin: 0 12px;
     font-weight: bold;
 }
@@ -103,7 +115,7 @@ nav {
     flex-direction: column;
     align-items: center;
     max-width: 600px;
-    margin-bottom: 0 auto;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -147,5 +159,52 @@ nav {
 
 .about-me__img {
     width: 100%;
+}
+
+/* Tech - Stack */
+
+.language__img {
+    width: 100%;
+    max-width: 100px;
+    transition: all 300ms;
+}
+
+.language:hover .language__img {
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(0.9);
+}
+
+.language {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.language__img--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 16px;
+}
+
+.language__list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.language__name {
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    font-size: 20px;
+    opacity: 0;
+}
+
+.language:hover .language__name {
+    transform: scale(1);
+    opacity: 1;
 }
 
